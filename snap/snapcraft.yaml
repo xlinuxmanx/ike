@@ -24,19 +24,32 @@ apps:
     desktop: bin/desktop-launch $SNAP/bin/qikea
   qikec:
     command: bin/qikec
+    desktop: bin/desktop-launch $SNAP/bin/qikec
 
 parts:
   ike:
-    build-packages:
-      - libssl-dev
-      - libedit-dev
-      - flex
-      - bison
-      - qt4-qmake
-      - qt4-default
-      - python2.7
-      - build-essensial
-      - cmake
-    source: https://www.shrew.net/download/ike/ike-2.2.1-release.tgz
-    plugin: cmake
-    configflags: ["-DCMAKE_INSTALL_PREFIX=/usr -DQTGUI=YES -DETCDIR=/etc -DNATT=YES"]
+    source: http://ftp.osuosl.org/pub/ubuntu/pool/universe/i/ike/ike-qtgui_2.2.1+dfsg-2ubuntu1_amd64.deb
+    source-type: deb
+    plugin: dump
+    stage-packages:
+      - ike
+      - ike-qtgui
+      - ipsec-tools
+      - libmng2
+      - libmysqlclient20
+      - libqt4-dbus
+      - libqt4-declarative
+      - libqt4-network
+      - libqt4-script
+      - libqt4-sql
+      - libqt4-sql-mysql
+      - libqt4-xml
+      - libqt4-xmlpatterns
+      - libqtcore4
+      - libqtdbus4
+      - libqtgui4
+      - mysql-common
+      - qdbus
+      - qt-at-spi
+      - qtchooser
+      - qtcore4-l10n
