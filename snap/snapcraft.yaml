@@ -35,7 +35,7 @@ apps:
       - wayland
       - home
   qikec:
-    command: bin/qikec
+    command: usr/bin/qikec
     plugs:
       - desktop
       - desktop-legacy
