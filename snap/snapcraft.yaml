@@ -21,7 +21,7 @@ apps:
     command: usr/bin/ikec
   iked:
     daemon: simple
-    command: usr/bin/iked
+    command: usr/sbin/iked
     plugs:
       - network
       - network-bind
