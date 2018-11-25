@@ -18,24 +18,24 @@ architectures:
 
 apps:
   ikec:
-    command: env PATH=$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH usr/bin/ikec
+    command: env PATH=$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH $SNAP/usr/bin/ikec
   iked:
     daemon: simple
-    command: env PATH=$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH usr/sbin/iked
+    command: env PATH=$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH $SNAP/usr/sbin/iked
     plugs:
       - network
       - network-bind
       - network-control
       - netlink-connector
   qikea:
-    command: env PATH=$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH usr/bin/qikea
+    command: env PATH=$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH $SNAP/usr/bin/qikea
     plugs:
       - desktop
       - desktop-legacy
       - wayland
       - home
   qikec:
-    command: env PATH=$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH usr/bin/qikec
+    command: env PATH=$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH $SNAP/usr/bin/qikec
     plugs:
       - desktop
       - desktop-legacy
