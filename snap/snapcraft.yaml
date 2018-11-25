@@ -21,12 +21,25 @@ apps:
     command: usr/bin/ikec
     environment:
       LD_LIBRARY_PATH: $LD_LIBRARY_PATH:$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH
+    plugs:
+      - desktop
+      - desktop-legacy
+      - wayland
+      - home
+      - network
+      - network-bind
+      - network-control
+      - netlink-connector
   iked:
     daemon: simple
     command: usr/sbin/iked
     environment:
       LD_LIBRARY_PATH: $LD_LIBRARY_PATH:$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH
     plugs:
+      - desktop
+      - desktop-legacy
+      - wayland
+      - home
       - network
       - network-bind
       - network-control
@@ -40,6 +53,10 @@ apps:
       - desktop-legacy
       - wayland
       - home
+      - network
+      - network-bind
+      - network-control
+      - netlink-connector
   qikec:
     command: usr/bin/qikec
     environment:
@@ -49,6 +66,10 @@ apps:
       - desktop-legacy
       - wayland
       - home
+      - network
+      - network-bind
+      - network-control
+      - netlink-connector
 
 parts:
   ike:
