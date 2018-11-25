@@ -28,7 +28,7 @@ apps:
       - network-control
       - netlink-connector
   qikea:
-    command: use/bin/qikea
+    command: usr/bin/qikea
     plugs:
       - desktop
       - desktop-legacy
