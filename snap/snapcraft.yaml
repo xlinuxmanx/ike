@@ -18,7 +18,7 @@ architectures:
 
 apps:
   ikec:
-    command: bin/ikec
+    command: usr/bin/ikec
   iked:
     daemon: simple
     command: usr/bin/iked
