@@ -24,10 +24,10 @@ apps:
     command: sbin/iked
   qikea:
     command: bin/qikea
-    desktop: bin/desktop-launch $SNAP/bin/qikea
+    desktop: bin/qikea
   qikec:
     command: bin/qikec
-    desktop: bin/desktop-launch $SNAP/bin/qikec
+    desktop: bin/qikec
 
 parts:
   ike:
