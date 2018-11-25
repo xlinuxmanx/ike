@@ -22,12 +22,25 @@ apps:
   iked:
     daemon: simple
     command: sbin/iked
+    plugs:
+      - network
+      - network-bind
+      - network-control
+      - netlink-connector
   qikea:
     command: bin/qikea
-    desktop: bin/qikea
+    plugs:
+      - desktop
+      - desktop-legacy
+      - wayland
+      - home
   qikec:
     command: bin/qikec
-    desktop: bin/qikec
+    plugs:
+      - desktop
+      - desktop-legacy
+      - wayland
+      - home
 
 parts:
   ike:
