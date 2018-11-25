@@ -1,0 +1,42 @@
+name: ike
+version: '2.2.1'
+summary: The Shewsoft VPN Manager
+description: |
+ The Shrew Soft VPN Client is a free IPsec VPN Client for FreeBSD, NetBSD,
+ Linux and Windows operating systems. This product can be used to communicate
+ with Open Source VPN servers (e.g. ipsec-tools) as well as some commercial
+ VPN servers.
+ .
+ This package provides the connection manager program, which allows one
+ to create, manage and use VPN connections.
+
+grade: devel
+confinement: devmode
+
+apps:
+  ikec:
+    command: bin/ikec
+  iked:
+    daemon: simple
+    command: sbin/iked
+  qikea:
+    command: bin/qikea
+    desktop: bin/desktop-launch $SNAP/bin/qikea
+  qikec:
+    command: bin/qikec
+
+parts:
+  ike:
+    build-packages:
+      - libssl-dev
+      - libedit-dev
+      - flex
+      - bison
+      - qt4-qmake
+      - qt4-default
+      - python2.7
+      - build-essensial
+      - cmake
+    source: https://www.shrew.net/download/ike/ike-2.2.1-release.tgz
+    plugin: cmake
+    configflags: ["-DCMAKE_INSTALL_PREFIX=/usr -DQTGUI=YES -DETCDIR=/etc -DNATT=YES"]
