@@ -20,12 +20,12 @@ apps:
   ikec:
     command: usr/bin/ikec
     environment:
-      PATH=$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH
+      LD_LIBRARY_PATH: $LD_LIBRARY_PATH:$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH
   iked:
     daemon: simple
     command: usr/sbin/iked
     environment:
-      PATH=$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH
+      LD_LIBRARY_PATH: $LD_LIBRARY_PATH:$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH
     plugs:
       - network
       - network-bind
@@ -34,7 +34,7 @@ apps:
   qikea:
     command: usr/bin/qikea
     environment:
-      PATH=$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH
+      LD_LIBRARY_PATH: $LD_LIBRARY_PATH:$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH
     plugs:
       - desktop
       - desktop-legacy
@@ -43,7 +43,7 @@ apps:
   qikec:
     command: usr/bin/qikec
     environment:
-      PATH=$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH
+      LD_LIBRARY_PATH: $LD_LIBRARY_PATH:$SNAP/usr/lib/x86_64-linux-gnu/ike:$PATH
     plugs:
       - desktop
       - desktop-legacy
