@@ -13,6 +13,9 @@ description: |
 grade: devel
 confinement: devmode
 
+architectures:
+  - build-on: amd64
+
 apps:
   ikec:
     command: bin/ikec
