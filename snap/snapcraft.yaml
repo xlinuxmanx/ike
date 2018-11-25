@@ -10,8 +10,8 @@ description: |
  This package provides the connection manager program, which allows one
  to create, manage and use VPN connections.
 
-grade: devel
-confinement: devmode
+grade: stable
+confinement: strict
 
 architectures:
   - build-on: amd64
