@@ -57,6 +57,7 @@ apps:
       - network-bind
       - network-control
       - netlink-connector
+      - x11
   qikec:
     command: usr/bin/qikec
     environment:
