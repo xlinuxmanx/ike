@@ -1,3 +1,4 @@
+base: core18
 name: ike-qt
 version: '2.2.1'
 summary: The Shewsoft VPN Manager
