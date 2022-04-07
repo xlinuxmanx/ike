@@ -1,5 +1,5 @@
 base: core18
-name: ike-qt
+name: ike-qt-lts
 version: '2.2.1'
 summary: The Shewsoft VPN Manager
 description: |
@@ -10,6 +10,8 @@ description: |
  .
  This package provides the connection manager program, which allows one
  to create, manage and use VPN connections.
+ .
+ It works on Ubuntu 20.04 LTS and up
 
 grade: stable
 confinement: strict
