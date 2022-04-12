@@ -1,6 +1,6 @@
 base: core18
 name: ike-qt-lts
-version: '2.2.1'
+version: '2.2.2'
 summary: The Shewsoft VPN Manager
 description: |
  The Shrew Soft VPN Client is a free IPsec VPN Client for FreeBSD, NetBSD,
@@ -14,10 +14,18 @@ description: |
  It works on Ubuntu 20.04 LTS and up
 
 grade: stable
-confinement: strict
 
 architectures:
   - build-on: amd64
+
+# because needs /var/run
+plugs:
+  run-iked:
+    interface: system-files
+    read:
+    - /var/run/ikedi
+    write:
+    - /var/run/ikedi
 
 apps:
   ikec:
@@ -47,6 +55,7 @@ apps:
       - network-bind
       - network-control
       - netlink-connector
+      - run-iked
   qikea:
     command: usr/bin/qikea
     environment:
